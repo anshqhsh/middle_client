@@ -1,5 +1,6 @@
 import { Routes, Route, useLocation } from 'react-router-dom'
-import styles from './Routes.module.scss'
+import HobbyList from './HobbyList'
+import styles from './routes.module.scss'
 
 const App = () => {
   // const theme = useAppSelector(getTheme)
@@ -18,7 +19,7 @@ const App = () => {
     <div className={styles.appWrapper}>
       <div className={styles.app}>
         <Routes>
-          <Route path='/' element={<div>hi</div>} />
+          <Route path='/' element={<HobbyList />} />
           {/* <Route path='weather' element={<Weather />}>
             <Route path=':city' element={<Weather />} />
           </Route> */}

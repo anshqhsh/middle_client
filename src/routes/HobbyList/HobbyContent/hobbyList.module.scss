@@ -1,0 +1,12 @@
+@use '/src/styles/constants/colors';
+
+.content {
+  margin: 0 auto;
+  padding-bottom: 200px;
+  width: 100%;
+  max-width: 720px;
+  background-color: #fff;
+  img {
+    width: 100%;
+  }
+}

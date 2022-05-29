@@ -1,0 +1,40 @@
+@use '/src/styles/constants/colors';
+
+.header_main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #fff;
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+.header_inner {
+  display: flex;
+  padding: 0 40px;
+  height: 68px;
+  width: 100%;
+  min-width: 750px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header_center {
+  align-items: center;
+  margin: 0 20px;
+  max-width: 466px;
+  p {
+    font-size: 1.5rem;
+  }
+}
+
+.header_right {
+  margin-right: 20px;
+}
