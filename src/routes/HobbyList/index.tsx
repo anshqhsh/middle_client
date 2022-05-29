@@ -1,6 +1,7 @@
 import Header from '../../components/Header'
 import HobbyContent from './HobbyContent'
 import styles from './hobbyList.module.scss'
+import ProductList from './ProductList'
 
 const HobbyList = () => {
   return (

@@ -6,6 +6,8 @@
   justify-content: center;
   box-sizing: border-box;
   position: fixed;
+  padding-left: 40px;
+  padding-right: 40px;
   top: 0;
   left: 0;
   right: 0;
@@ -21,7 +23,7 @@
   padding: 0 40px;
   height: 68px;
   width: 100%;
-  min-width: 750px;
+  min-width: 680px;
   align-items: center;
   justify-content: space-between;
 }
