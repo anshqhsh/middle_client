@@ -1,9 +1,14 @@
+import { iteratorSymbol } from 'immer/dist/internal'
+import { useState } from 'react'
 import { useQuery } from 'react-query'
 import { getYoutubeVideoApi } from 'services/youtube'
 
 import { isAxiosError } from 'utils/axios'
+import YoutubeItem from './YoutubeItem'
+import YoutubePlayer from './YoutubePlayer'
 
-const YoutubeItems = () => {
+const Youtube = () => {
+  const [videoId, setVideoId] = useState('')
   const maxResult = 5
   const q = '허먼밀러'
 
@@ -22,16 +27,18 @@ const YoutubeItems = () => {
       },
     }
   )
-  console.log(data)
   if (!data) return null
   if (isLoading) return <div>Loading...</div>
+
   return (
     <div>
-      <h1>YoutubeItems</h1>
       {data.map((item) => {
-        return <div key={item.id.videoId}>{item.snippet.title}</div>
+        return (
+          <YoutubeItem key={item.id.videoId} videoId={item.id.videoId} snippet={item.snippet} setVideoId={setVideoId} />
+        )
       })}
+      {videoId ? <YoutubePlayer videoId={videoId} /> : null}
     </div>
   )
 }
-export default YoutubeItems
+export default Youtube

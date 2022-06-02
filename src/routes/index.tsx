@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
-import HobbyList from './HobbyList'
+import HobbyMain from './HobbyMain'
 import styles from './routes.module.scss'
 
 const App = () => {
@@ -7,7 +7,7 @@ const App = () => {
     <div className={styles.appWrapper}>
       <div className={styles.app}>
         <Routes>
-          <Route path='/' element={<HobbyList />} />
+          <Route path='/' element={<HobbyMain />} />
           <Route path='*' element={<div>404</div>} />
         </Routes>
       </div>

@@ -4,7 +4,7 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import SliderItem from 'components/SliderItem'
 import ProductList from '../ProductList'
-import YoutubeItems from 'components/YoutubeItems'
+import Youtube from 'components/Youtube'
 
 const settings = {
   dots: true,
@@ -34,7 +34,7 @@ const HobbyContent = () => {
           })}
         </Slider>
         <ProductList />
-        <YoutubeItems />
+        <Youtube />
       </div>
     </div>
   )

@@ -1,9 +1,8 @@
-import YoutubeItems from 'components/YoutubeItems'
 import Header from '../../components/Header'
 import HobbyContent from './HobbyContent'
 import styles from './hobbyList.module.scss'
 
-const HobbyList = () => {
+const HobbyMain = () => {
   return (
     <div className={styles.hobby_container}>
       <Header />
@@ -12,4 +11,4 @@ const HobbyList = () => {
   )
 }
 
-export default HobbyList
+export default HobbyMain
