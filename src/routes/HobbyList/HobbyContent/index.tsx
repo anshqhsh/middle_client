@@ -12,26 +12,21 @@ const settings = {
   slidesToShow: 1,
   slidesToScroll: 1,
 }
-
+const srcs = [
+  'https://s.pstatic.net/static/newsstand/2022/0526/article_img/new_main/9077/094552_001.jpeg',
+  'https://s.pstatic.net/static/newsstand/2022/0526/article_img/new_main/9077/094552_001.jpeg',
+  'https://s.pstatic.net/static/newsstand/2022/0526/article_img/new_main/9077/094552_001.jpeg',
+  'https://s.pstatic.net/static/newsstand/2022/0526/article_img/new_main/9077/094552_001.jpeg',
+  'https://s.pstatic.net/static/newsstand/2022/0526/article_img/new_main/9077/094552_001.jpeg',
+]
 // TODO 이미지 주소 가져오는 API만들어야할듯
 // const imgStorage = [<SliderItem src={src} />]
 
 const HobbyContent = () => {
-  const srcs = [
-    'https://s.pstatic.net/static/newsstand/2022/0526/article_img/new_main/9077/094552_001.jpeg',
-    'https://s.pstatic.net/static/newsstand/2022/0526/article_img/new_main/9077/094552_001.jpeg',
-    'https://s.pstatic.net/static/newsstand/2022/0526/article_img/new_main/9077/094552_001.jpeg',
-    'https://s.pstatic.net/static/newsstand/2022/0526/article_img/new_main/9077/094552_001.jpeg',
-    'https://s.pstatic.net/static/newsstand/2022/0526/article_img/new_main/9077/094552_001.jpeg',
-  ]
   const SliderItems = () => {}
   return (
     <div className={styles.content}>
       <div className={styles.img_container}>
-        <img
-          src='https://s.pstatic.net/static/newsstand/2022/0526/article_img/new_main/9077/094552_001.jpeg'
-          alt='이미지'
-        />
         <Slider {...settings}>
           {srcs.map((value) => {
             return <SliderItem key={value} src={value} />

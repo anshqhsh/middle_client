@@ -1,0 +1,182 @@
+{
+  "kind": "youtube#searchListResponse",
+  "etag": "1X1Dwyy3o_5kQxJdW3XRXbHgkVU",
+  "nextPageToken": "CAUQAA",
+  "regionCode": "KR",
+  "pageInfo": {
+    "totalResults": 2544,
+    "resultsPerPage": 5
+  },
+  "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "ILoPgFe0PYUolhN3_arhyfxKiVw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Spng18nJJUo"
+      },
+      "snippet": {
+        "publishedAt": "2022-01-07T08:00:26Z",
+        "channelId": "UCiTGSmGgJtKTcjEvDk_zRhw",
+        "title": "1700만원 아껴주는 200만원짜리 의자! 솔직단점 포함 허먼밀러 뉴에어론 사용리뷰",
+        "description": "1700만원 짜리 척주교정 짤 암만 봐야 소용없다 제대로 된 바른 앉은 자세를 강제로 만들어 주는 허먼밀러 뉴에어론 의자로 척추나락 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Spng18nJJUo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Spng18nJJUo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Spng18nJJUo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "귀곰",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-01-07T08:00:26Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "LDotIMqziKtuHiYRGrXoX62KfVc",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "r9aTJbnFZvU"
+      },
+      "snippet": {
+        "publishedAt": "2021-08-09T09:45:03Z",
+        "channelId": "UCXfFPHbEIw-LlxBQx7JSQsQ",
+        "title": "진짜 편하다고? 210만원 허먼밀러 에어론 체어 풀옵션 솔직한 후기..",
+        "description": "이 영상은 인노바드로부터 제품만 대여받아 제작되었습니다 ✓ 쿠팡에서 필요한 것 구매하면 해용 채널에 도움이 됩니다! ✓ 아무거나 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/r9aTJbnFZvU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/r9aTJbnFZvU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/r9aTJbnFZvU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "해용",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-08-09T09:45:03Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "y-oivxuD8QFbMlEwK0tB6dRjttU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "xPn1mmD8DOw"
+      },
+      "snippet": {
+        "publishedAt": "2022-03-23T07:58:45Z",
+        "channelId": "UCV77qil5hUvWrMGgWaZa5Tw",
+        "title": "의자만 1억원치, 1년 동안 써본 후기 (허먼밀러 뉴에어론)",
+        "description": "00:00 인트로 00:35 허먼밀러란? 00:50 허먼밀러 예약 가능! ※인노바드 주소:https://www.innovad.co.kr/ 00:57 틸팅이란? 01:30 뉴에 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/xPn1mmD8DOw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/xPn1mmD8DOw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/xPn1mmD8DOw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "아정당",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-03-23T07:58:45Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "dm8hwlyaXpNxhHoq7Kx36t3wmg8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "7-kQ0KVdKRM"
+      },
+      "snippet": {
+        "publishedAt": "2022-04-13T04:22:03Z",
+        "channelId": "UCoN1XLeAX2OazuZdQ9b8U9Q",
+        "title": "개발자가 말하는 의자 허먼밀러 뉴체어론과 시디즈 T50 에어 비교",
+        "description": "개발자가 말하는 의자 허먼밀러 뉴체어론과 시디즈 T50 에어 비교 #시디즈 #허먼밀러 #개발자의자.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/7-kQ0KVdKRM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/7-kQ0KVdKRM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/7-kQ0KVdKRM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "큰돌의터전",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-04-13T04:22:03Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "RI0SuV4kBOoQYsHQdgwU9NvGLjs",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "k6qRBmKNDjY"
+      },
+      "snippet": {
+        "publishedAt": "2022-03-20T10:45:03Z",
+        "channelId": "UCJCqV1PsakBbjD0DI6KJIgQ",
+        "title": "150만원이 넘는 의자 버리고 50만원짜리 새로 샀습니다.",
+        "description": "이 영상은 놀랍게도 광고가 아닙니다. 챕터 0:00 그동안 쓰던 150만원짜리 의자 2:05 허먼밀러 에어론의 단점 3:12 사이즈오브체어 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/k6qRBmKNDjY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/k6qRBmKNDjY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/k6qRBmKNDjY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "비됴클래스",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-03-20T10:45:03Z"
+      }
+    }
+  ]
+}

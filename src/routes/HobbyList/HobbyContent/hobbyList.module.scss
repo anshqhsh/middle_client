@@ -1,13 +1,14 @@
 @use '/src/styles/constants/colors';
 
 .content {
-  margin: 0 auto;
+  width: 100%;
+  min-width: 680px;
+  max-width: 1200px;
   padding: 40px;
   padding-bottom: 200px;
-  width: 100%;
-  max-width: 1200px;
-  min-width: 680px;
-  background-color: #fff;
+  margin: 0 auto;
+  background-color: #ffffff;
+
   img {
     width: 100%;
   }
