@@ -4,6 +4,7 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import SliderItem from 'components/SliderItem'
 import ProductList from '../ProductList'
+import YoutubeItems from 'components/YoutubeItems'
 
 const settings = {
   dots: true,
@@ -19,7 +20,7 @@ const srcs = [
   'https://s.pstatic.net/static/newsstand/2022/0526/article_img/new_main/9077/094552_001.jpeg',
   'https://s.pstatic.net/static/newsstand/2022/0526/article_img/new_main/9077/094552_001.jpeg',
 ]
-// TODO 이미지 주소 가져오는 API만들어야할듯
+// TODO: 이미지 주소 가져오는 API만들어야할듯
 // const imgStorage = [<SliderItem src={src} />]
 
 const HobbyContent = () => {
@@ -33,6 +34,7 @@ const HobbyContent = () => {
           })}
         </Slider>
         <ProductList />
+        <YoutubeItems />
       </div>
     </div>
   )

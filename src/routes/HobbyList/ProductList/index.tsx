@@ -1,20 +1,5 @@
 import ProductItem from 'components/ProductItem'
-import { useQuery } from 'react-query'
-import { useMount } from 'react-use'
-import { getYoutubeVideo5resultApi } from 'services/youtube'
-import { isAxiosError } from 'utils/axios'
 import styles from './productList.module.scss'
-
-const settings = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-}
-
-// TODO 이미지 주소 가져오는 API만들어야할듯
-// const imgStorage = [<SliderItem src={src} />]
 
 const ProductList = () => {
   const srcs = [
@@ -24,26 +9,6 @@ const ProductList = () => {
     'https://kream-phinf.pstatic.net/MjAyMjA1MjNfMTgx/MDAxNjUzMjkzNzk0NzU0.tLzKQEJ79hYVdC4yP30d398rwXNFFBTQ3l_QFdJhOk0g.fMXpuNu4ouh7J0cX4dUbt4465Wbth2ntNLqUUGi3iUMg.PNG/a_a9a2583dacd24da8bba13a9c0b1c6bfc.png?type=m_webp',
     'https://kream-phinf.pstatic.net/MjAyMjA0MjlfMjYz/MDAxNjUxMjIzODcxODM4.LW6fYHcJwpfDF9B_n_dHfFjtJYiD8f9ty8URst4Z4k4g.xzn7bHGYAmTTrN75eqcEbs2Q4PzjqbhpnSuChkJOeowg.PNG/a_8d433e328c44403aa9b5df2045a0e62e.png?type=m_webp',
   ]
-  const maxResult = 5
-  const q = '허먼밀러'
-
-  const { data, isLoading } = useQuery(
-    ['getYoutubeVideo5resultApi', maxResult, q],
-    () => getYoutubeVideo5resultApi({ maxResult, q }).then((res) => res.data),
-    {
-      refetchOnWindowFocus: true,
-      suspense: true,
-      useErrorBoundary: true,
-      onError(err) {
-        if (isAxiosError(err)) {
-          // eslint-disable-next-line no-console
-          console.log(err)
-        }
-      },
-    }
-  )
-  console.log(data)
-  if (!data) return null
 
   return (
     <div className={styles.productContainer}>

@@ -1,3 +1,4 @@
+import YoutubeItems from 'components/YoutubeItems'
 import Header from '../../components/Header'
 import HobbyContent from './HobbyContent'
 import styles from './hobbyList.module.scss'
