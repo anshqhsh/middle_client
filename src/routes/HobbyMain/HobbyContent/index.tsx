@@ -5,6 +5,8 @@ import 'slick-carousel/slick/slick-theme.css'
 import SliderItem from 'components/SliderItem'
 import ProductList from '../ProductList'
 import Youtube from 'components/Youtube'
+import store from 'store'
+import { useEffect, useState } from 'react'
 
 const settings = {
   dots: true,
@@ -24,7 +26,25 @@ const srcs = [
 // const imgStorage = [<SliderItem src={src} />]
 
 const HobbyContent = () => {
-  const SliderItems = () => {}
+  const [favorite, setFavorite] = useState([])
+
+  // only run once the first time this component is rendered
+  useEffect(() => {
+    if (localStorage.getItem('favorite')) {
+      setFavorite(store.get('favorite'))
+    }
+  }, [])
+
+  // run every time our pet state changes
+  useEffect(() => {
+    store.set('favorite', { itemId: '허먼밀러' })
+  }, [favorite])
+  // TODO: localstorage 즐겨 찾기
+
+  // if()
+  // store.set('favorite', {
+  //   itemId: '허먼밀러',
+  // })
   return (
     <div className={styles.content}>
       <div className={styles.img_container}>

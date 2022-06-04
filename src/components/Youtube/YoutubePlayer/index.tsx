@@ -7,14 +7,14 @@ interface Props {
 const YoutubePlayer = ({ videoId }: Props) => {
   return (
     <div>
-      <section className={styles.detail}>
+      <section className={styles.videoContainer}>
         <iframe
           className={styles.video}
           id='ytplayer'
           // type='text/html'
           title='youtube video'
           width='100%'
-          height='500'
+          height='800'
           src={`https://www.youtube.com/embed/${videoId}`}
           frameBorder='0'
           allowFullScreen

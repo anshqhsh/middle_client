@@ -7,14 +7,16 @@ import { isAxiosError } from 'utils/axios'
 import YoutubeItem from './YoutubeItem'
 import YoutubePlayer from './YoutubePlayer'
 
+import styles from './youtube.module.scss'
+
 const Youtube = () => {
   const [videoId, setVideoId] = useState('')
-  const maxResult = 5
+  const maxResults = 4
   const q = '허먼밀러'
 
   const { data, isLoading } = useQuery(
-    ['getYoutubeVideo5resultApi', maxResult, q],
-    () => getYoutubeVideoApi({ maxResult, q }).then((res) => res.data.items),
+    ['getYoutubeVideoApi', maxResults, q],
+    () => getYoutubeVideoApi({ maxResults, q }).then((res) => res.data.items),
     {
       refetchOnWindowFocus: false,
       suspense: true,
@@ -29,14 +31,21 @@ const Youtube = () => {
   )
   if (!data) return null
   if (isLoading) return <div>Loading...</div>
-
+  console.log(data)
   return (
     <div>
-      {data.map((item) => {
-        return (
-          <YoutubeItem key={item.id.videoId} videoId={item.id.videoId} snippet={item.snippet} setVideoId={setVideoId} />
-        )
-      })}
+      <div className={styles.ytItemContainer}>
+        {data.map((item) => {
+          return (
+            <YoutubeItem
+              key={item.id.videoId}
+              videoId={item.id.videoId}
+              snippet={item.snippet}
+              setVideoId={setVideoId}
+            />
+          )
+        })}
+      </div>
       {videoId ? <YoutubePlayer videoId={videoId} /> : null}
     </div>
   )

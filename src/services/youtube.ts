@@ -2,7 +2,7 @@ import { axios } from 'hooks/worker'
 import { IYoutube } from 'types/youtube'
 
 interface Params {
-  maxResult: number
+  maxResults: number
   q: string
 }
 

@@ -11,16 +11,14 @@ const YoutubeItem = ({ videoId, snippet, setVideoId }: Props) => {
   }
 
   return (
-    <div>
-      <li className={styles.container}>
-        <button type='button' className={styles.video} onClick={onClickHandler}>
-          <img className={styles.thumbnail} src={snippet.thumbnails.medium.url} alt='video thumbnail' />
-          <div className={styles.metadata}>
-            <p className={styles.title}>{snippet.title}</p>
-            <p className={styles.channel}>{snippet.channelTitle}</p>
-          </div>
-        </button>
-      </li>
+    <div className={styles.container}>
+      <button type='button' className={styles.video} onClick={onClickHandler}>
+        <img className={styles.thumbnail} src={snippet.thumbnails.medium.url} alt='video thumbnail' />
+        <div className={styles.metadata}>
+          <p className={styles.title}>{snippet.title}</p>
+          <p className={styles.channel}>{snippet.channelTitle}</p>
+        </div>
+      </button>
     </div>
   )
 }
