@@ -10,13 +10,21 @@ interface Props {
 
 const ProductItem = ({ itemId, src }: Props) => {
   const onClickHandller = () => {
+    console.log('??')
     const getLocalStorage = store.get('favorite')
-    if (getLocalStorage) {
-      store.set('favorite', [...getLocalStorage, { itemId, src }])
-    } else {
+    if (!getLocalStorage) {
       store.set('favorite', [{ itemId, src }])
+    } else {
+      const idx = getLocalStorage.findIndex((e: Props) => e.itemId === itemId)
+      if (idx === -1) {
+        store.set('favorite', [...getLocalStorage, { itemId, src }])
+      } else {
+        getLocalStorage.splice(idx, 1)
+        store.set('favorite', getLocalStorage)
+      }
     }
   }
+  console.log(store.get('favorite'))
   return (
     <div className={styles.productWrapper}>
       <img className={styles.productImg} src={src} alt='img' />
@@ -31,5 +39,4 @@ const ProductItem = ({ itemId, src }: Props) => {
     </div>
   )
 }
-
 export default ProductItem

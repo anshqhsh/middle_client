@@ -22,29 +22,20 @@ const srcs = [
   'https://s.pstatic.net/static/newsstand/2022/0526/article_img/new_main/9077/094552_001.jpeg',
   'https://s.pstatic.net/static/newsstand/2022/0526/article_img/new_main/9077/094552_001.jpeg',
 ]
-// TODO: 이미지 주소 가져오는 API만들어야할듯
-// const imgStorage = [<SliderItem src={src} />]
 
 const HobbyContent = () => {
   const [favorite, setFavorite] = useState([])
+  const [isFavorite, setIsFavorite] = useState(false)
 
-  // only run once the first time this component is rendered
   useEffect(() => {
     if (localStorage.getItem('favorite')) {
       setFavorite(store.get('favorite'))
+      setIsFavorite(true)
+    } else {
+      setIsFavorite(false)
     }
   }, [])
 
-  // run every time our pet state changes
-  useEffect(() => {
-    store.set('favorite', { itemId: '허먼밀러' })
-  }, [favorite])
-  // TODO: localstorage 즐겨 찾기
-
-  // if()
-  // store.set('favorite', {
-  //   itemId: '허먼밀러',
-  // })
   return (
     <div className={styles.content}>
       <div className={styles.img_container}>

@@ -29,7 +29,6 @@ const ProductList = () => {
   return (
     <div className={styles.productContainer}>
       {items.map((item) => (
-        // eslint-disable-next-line react/jsx-key
         <ProductItem key={item.itemId} itemId={item.itemId} src={item.src} />
       ))}
     </div>
