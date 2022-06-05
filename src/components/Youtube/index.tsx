@@ -32,7 +32,6 @@ const Youtube = () => {
   if (!data) return null
   if (isLoading) return <div>Loading...</div>
 
-  console.log(data)
   return (
     <div>
       <div className={styles.ytItemContainer}>
