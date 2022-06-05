@@ -6,7 +6,8 @@ import SliderItem from 'components/SliderItem'
 import ProductList from '../ProductList'
 import Youtube from 'components/Youtube'
 import store from 'store'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
+import { useMount } from 'react-use'
 
 const settings = {
   dots: true,
@@ -25,16 +26,18 @@ const srcs = [
 
 const HobbyContent = () => {
   const [favorite, setFavorite] = useState([])
-  const [isFavorite, setIsFavorite] = useState(false)
+  // const [isFavorite, setIsFavorite] = useState(false)
 
-  useEffect(() => {
+  useMount(() => {
     if (localStorage.getItem('favorite')) {
       setFavorite(store.get('favorite'))
-      setIsFavorite(true)
+      // eslint-disable-next-line no-console
+      console.log(favorite)
+      // setIsFavorite(true)
     } else {
-      setIsFavorite(false)
+      // setIsFavorite(false)
     }
-  }, [])
+  })
 
   return (
     <div className={styles.content}>

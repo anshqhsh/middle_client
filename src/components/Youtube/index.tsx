@@ -1,4 +1,3 @@
-import { iteratorSymbol } from 'immer/dist/internal'
 import { useState } from 'react'
 import { useQuery } from 'react-query'
 import { getYoutubeVideoApi } from 'services/youtube'

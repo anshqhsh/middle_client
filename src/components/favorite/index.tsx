@@ -6,7 +6,6 @@ interface Props {
 }
 const Favorite = (favorite: Array<Props> | []) => {
   const favoriteArr = Object.values(favorite)
-  console.log(favoriteArr)
   return (
     <div className={styles.favoriteItem}>
       <ul>
