@@ -17,8 +17,8 @@ const settings = {
   slidesToScroll: 1,
 }
 const srcs = [
-  'https://s.pstatic.net/static/newsstand/2022/0526/article_img/new_main/9077/094552_001.jpeg',
-  'https://s.pstatic.net/static/newsstand/2022/0526/article_img/new_main/9077/094552_001.jpeg',
+  'https://lh4.googleusercontent.com/jGAm8iui7CMm4TExoMKjYRVJocA-TQ0g_hrrShAwnzGJ1ER8HzJb8Kf9Rah2_5NUTPx1tA0KGE14bzrz4CfH=w2216-h2488-rw',
+  'https://lh4.googleusercontent.com/sXygbp6zljaouICyZEEILTr9kwD6c271Xpc4g2UigWHJINisSFHlpWVWxkRYQipJtmX20vAGNQpfgz3Zfmo4=w2216-h2488-rw',
   'https://s.pstatic.net/static/newsstand/2022/0526/article_img/new_main/9077/094552_001.jpeg',
   'https://s.pstatic.net/static/newsstand/2022/0526/article_img/new_main/9077/094552_001.jpeg',
   'https://s.pstatic.net/static/newsstand/2022/0526/article_img/new_main/9077/094552_001.jpeg',
