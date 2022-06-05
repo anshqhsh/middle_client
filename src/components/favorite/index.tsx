@@ -1,7 +1,3 @@
-/* eslint-disable react/destructuring-assignment */
-import { JSXElementConstructor, Key, ReactElement, ReactFragment, useEffect, useState } from 'react'
-import { useMount } from 'react-use'
-import store from 'store'
 import styles from './favorite.module.scss'
 
 interface Props {
@@ -13,9 +9,8 @@ const Favorite = (favorite: Array<Props> | []) => {
   console.log(favoriteArr)
   return (
     <div className={styles.favoriteItem}>
-      <h3>관심 상품</h3>
       <ul>
-        {favoriteArr ? (
+        {favoriteArr.length !== 0 ? (
           favoriteArr.map((e: Props) => {
             return (
               <li key={e.itemId}>

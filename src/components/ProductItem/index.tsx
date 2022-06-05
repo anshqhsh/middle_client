@@ -10,7 +10,6 @@ interface Props {
 
 const ProductItem = ({ itemId, src }: Props) => {
   const onClickHandller = () => {
-    console.log('??')
     const getLocalStorage = store.get('favorite')
     if (!getLocalStorage) {
       store.set('favorite', [{ itemId, src }])
@@ -24,14 +23,14 @@ const ProductItem = ({ itemId, src }: Props) => {
       }
     }
   }
-  console.log(store.get('favorite'))
+
   return (
     <div className={styles.productWrapper}>
-      <img className={styles.productImg} src={src} alt='img' />
+      <div className={styles.imageWrapper}>
+        <img className={styles.productImg} src={src} alt='img' />
+      </div>
       <div className={styles.infoBox}>
-        <p>허먼밀러</p>
-        <p>에어론</p>
-        <p>1,000,000</p>
+        <p>{itemId}</p>
         <button type='button' onClick={onClickHandller}>
           <FavoriteIcon />
         </button>
