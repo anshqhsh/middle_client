@@ -4,6 +4,8 @@ import { useState } from 'react'
 import { useMount } from 'react-use'
 import styles from './header.module.scss'
 import store from 'store'
+import { useAppSelector } from 'hooks'
+import { getFavorite } from 'states/favorite'
 
 interface Props {
   itemId: string
@@ -11,12 +13,6 @@ interface Props {
 }
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
-  const [favorite, setFavorite] = useState<Props[]>([])
-
-  useMount(() => {
-    const localStorageItem = store.get('favorite')
-    setFavorite(localStorageItem)
-  })
 
   const onClickOpenHandler = () => {
     setIsOpen((_isOpen) => !_isOpen)
@@ -34,7 +30,7 @@ const Header = () => {
             <FavoriteIcon />
             <span>관심상품</span>
           </button>
-          {isOpen && <Favorite {...favorite} />}
+          {isOpen && <Favorite />}
         </div>
       </div>
     </div>

@@ -1,20 +1,19 @@
+import { useAppSelector } from 'hooks'
+import favorite, { getFavorite } from 'states/favorite'
 import styles from './favorite.module.scss'
 
-interface Props {
-  itemId: string
-  src: string
-}
-const Favorite = (favorite: Array<Props> | []) => {
-  const favoriteArr = Object.values(favorite)
+const Favorite = () => {
+  const favoriteList = useAppSelector(getFavorite) || []
+  console.log(favoriteList)
   return (
     <div className={styles.favoriteItem}>
       <ul>
-        {favoriteArr.length !== 0 ? (
-          favoriteArr.map((e: Props) => {
+        {favoriteList.length !== 0 ? (
+          favoriteList.map((e) => {
             return (
-              <li key={e.itemId}>
-                <img className={styles.productImg} src={e.src} alt='img' />
-                <h4>{e.itemId}</h4>
+              <li key={e}>
+                {/* <img className={styles.productImg} src={e.src} alt='img' /> */}
+                <h4>{e}</h4>
               </li>
             )
           })

@@ -1,26 +1,26 @@
 import { createSlice } from '@reduxjs/toolkit'
+import store from 'store'
 import { RootState } from 'states'
 
 export interface IFavoriteItemKey {
-  favorite: {
-    itemId: string
-  }
+  favoriteItemIds: string[]
 }
-const INITIAL_STATE = {
-  favorite: {
-    itemId: '',
-  },
-}
+const INITIAL_STATE: IFavoriteItemKey = { favoriteItemIds: store.get('favorite') || [] }
+
+// theme: store.get('foundation.theme') || 'light',
 
 const systemSlice = createSlice({
   name: 'favorite',
-  initialState: INITIAL_STATE as IFavoriteItemKey,
+  initialState: INITIAL_STATE,
   reducers: {
     setItemId: (state, action) => {
-      state.favorite = action.payload
+      const newSetFavorite = action.payload
+      console.log(newSetFavorite)
+      store.set('favorite', newSetFavorite)
+      state.favoriteItemIds = newSetFavorite
     },
     resetItemId: (state, action) => {
-      state.favorite = INITIAL_STATE.favorite
+      state.favoriteItemIds = INITIAL_STATE.favoriteItemIds
     },
   },
 })
@@ -28,4 +28,4 @@ const systemSlice = createSlice({
 export const { setItemId } = systemSlice.actions
 export default systemSlice.reducer
 
-export const getFavorite = (state: RootState) => state.favorite.favorite
+export const getFavorite = (state: RootState) => state.favorite.favoriteItemIds

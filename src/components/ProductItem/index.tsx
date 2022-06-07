@@ -2,6 +2,9 @@ import { FavoriteIcon } from 'assets/svgs'
 
 import styles from './productItem.module.scss'
 import store from 'store'
+import { useAppDispatch, useAppSelector } from 'hooks'
+import { getFavorite, setItemId } from 'states/favorite'
+import { useEffect } from 'react'
 
 interface Props {
   itemId: string
@@ -9,18 +12,17 @@ interface Props {
 }
 
 const ProductItem = ({ itemId, src }: Props) => {
+  const dispatch = useAppDispatch()
+  const favoriteList = [...useAppSelector(getFavorite)]
+
   const onClickHandller = () => {
-    const getLocalStorage = store.get('favorite')
-    if (!getLocalStorage) {
-      store.set('favorite', [{ itemId, src }])
+    const findIdx = favoriteList.findIndex((e) => e === itemId)
+
+    if (findIdx === -1) {
+      dispatch(setItemId([...favoriteList, itemId]))
     } else {
-      const idx = getLocalStorage.findIndex((e: Props) => e.itemId === itemId)
-      if (idx === -1) {
-        store.set('favorite', [...getLocalStorage, { itemId, src }])
-      } else {
-        getLocalStorage.splice(idx, 1)
-        store.set('favorite', getLocalStorage)
-      }
+      favoriteList.splice(findIdx, 1)
+      dispatch(setItemId(favoriteList))
     }
   }
 
