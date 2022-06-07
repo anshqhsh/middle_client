@@ -8,6 +8,7 @@ const App = () => {
       <div className={styles.app}>
         <Routes>
           <Route path='/' element={<HobbyMain />} />
+          {/* <Route path='/home' element{<></>} */}
           <Route path='*' element={<div>404</div>} />
         </Routes>
       </div>

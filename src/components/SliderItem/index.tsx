@@ -1,4 +1,3 @@
-import { FavoriteIcon } from 'assets/svgs'
 import styles from './sliderItem.module.scss'
 
 interface Props {
