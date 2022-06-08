@@ -8,6 +8,7 @@ import Youtube from 'components/Youtube'
 import store from 'store'
 import { useState } from 'react'
 import { useMount } from 'react-use'
+import { SliderSrcs } from 'assets/image'
 
 const settings = {
   dots: true,
@@ -16,31 +17,13 @@ const settings = {
   slidesToShow: 1,
   slidesToScroll: 1,
 }
-const srcs = [
-  'https://s.pstatic.net/static/newsstand/2022/0526/article_img/new_main/9077/094552_001.jpeg',
-  'https://s.pstatic.net/static/newsstand/2022/0526/article_img/new_main/9077/094552_001.jpeg',
-  'https://s.pstatic.net/static/newsstand/2022/0526/article_img/new_main/9077/094552_001.jpeg',
-]
 
 const DetailPage = () => {
-  const [favorite, setFavorite] = useState([])
-
-  useMount(() => {
-    if (localStorage.getItem('favorite')) {
-      setFavorite(store.get('favorite'))
-      // eslint-disable-next-line no-console
-      console.log(favorite)
-      // setIsFavorite(true)
-    } else {
-      // setIsFavorite(false)
-    }
-  })
-
   return (
     <div className={styles.content}>
       <div className={styles.img_container}>
         <Slider {...settings}>
-          {srcs.map((value) => {
+          {SliderSrcs.map((value) => {
             return <SliderItem key={value} src={value} />
           })}
         </Slider>

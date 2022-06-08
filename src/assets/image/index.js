@@ -32,9 +32,9 @@ export const ImgSrcs = [
     src: dell,
   },
   {
-    itemId: '맥북프로 16',
+    itemId: '맥북 16인치',
     src: mbp16,
   },
 ]
 
-export const SliderItem = [slider1, slider2, slider3, slider4, slider5, slider6, slider7, slider8, slider9, slider10]
+export const SliderSrcs = [slider1, slider2, slider3, slider4, slider5, slider6, slider7, slider8, slider9, slider10]

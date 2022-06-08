@@ -1,11 +1,17 @@
-import { useAppSelector } from 'hooks'
+import { useAppDispatch, useAppSelector } from 'hooks'
 import { useDispatch } from 'react-redux'
-import favorite, { getFavorite } from 'states/favorite'
+import favorite, { getFavorite, setItemId } from 'states/favorite'
 import styles from './favorite.module.scss'
+import store from 'store'
 
 const Favorite = () => {
   const favoriteList = useAppSelector(getFavorite) || []
-  console.log(favoriteList)
+  const dispatch = useAppDispatch()
+
+  const deleteFavoriteHandler = () => {
+    dispatch(setItemId([]))
+    store.set('favorite', [])
+  }
   return (
     <div className={styles.favoriteItem}>
       <ul>
@@ -26,6 +32,9 @@ const Favorite = () => {
           <li>Empty Item</li>
         )}
       </ul>
+      <button type='button' onClick={deleteFavoriteHandler}>
+        Delete All
+      </button>
     </div>
   )
 }

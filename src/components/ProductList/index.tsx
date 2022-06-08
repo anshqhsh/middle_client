@@ -7,7 +7,7 @@ const ProductList = () => {
   return (
     <div className={styles.productContainer}>
       {ImgSrcs.map((item) => (
-        <ProductItem key={2} itemId={item.itemId} src={item.src} />
+        <ProductItem key={`${item.itemId} key`} itemId={item.itemId} src={item.src} />
       ))}
     </div>
   )
