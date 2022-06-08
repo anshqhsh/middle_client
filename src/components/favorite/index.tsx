@@ -1,4 +1,5 @@
 import { useAppSelector } from 'hooks'
+import { useDispatch } from 'react-redux'
 import favorite, { getFavorite } from 'states/favorite'
 import styles from './favorite.module.scss'
 
@@ -12,7 +13,11 @@ const Favorite = () => {
           favoriteList.map((e) => {
             return (
               <li key={e}>
-                {/* <img className={styles.productImg} src={e.src} alt='img' /> */}
+                <img
+                  className={styles.productImg}
+                  src='https://s.pstatic.net/static/newsstand/2022/0526/article_img/new_main/9077/094552_001.jpeg'
+                  alt='img'
+                />
                 <h4>{e}</h4>
               </li>
             )

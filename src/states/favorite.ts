@@ -15,11 +15,12 @@ const systemSlice = createSlice({
   reducers: {
     setItemId: (state, action) => {
       const newSetFavorite = action.payload
-      console.log(newSetFavorite)
+      console.log({ newSetFavorite })
       store.set('favorite', newSetFavorite)
       state.favoriteItemIds = newSetFavorite
     },
-    resetItemId: (state, action) => {
+    resetItemId: (state) => {
+      store.remove('favorite')
       state.favoriteItemIds = INITIAL_STATE.favoriteItemIds
     },
   },
