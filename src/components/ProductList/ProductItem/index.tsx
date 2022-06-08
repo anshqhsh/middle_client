@@ -5,6 +5,7 @@ import store from 'store'
 import { useAppDispatch, useAppSelector } from 'hooks'
 import { getFavorite, setItemId } from 'states/favorite'
 import { useEffect } from 'react'
+import { getYoutube, setYoutube } from 'states/youtube'
 
 interface Props {
   itemId: string

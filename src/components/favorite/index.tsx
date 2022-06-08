@@ -11,6 +11,9 @@ const Favorite = () => {
   const deleteFavoriteHandler = () => {
     dispatch(setItemId([]))
     store.set('favorite', [])
+
+    // eslint-disable-next-line no-alert
+    alert('관심상품이 없습니다.')
   }
   return (
     <div className={styles.favoriteItem}>
@@ -32,7 +35,7 @@ const Favorite = () => {
           <li>Empty Item</li>
         )}
       </ul>
-      <button type='button' onClick={deleteFavoriteHandler}>
+      <button className={styles.deleteBtn} type='button' onClick={deleteFavoriteHandler}>
         Delete All
       </button>
     </div>
