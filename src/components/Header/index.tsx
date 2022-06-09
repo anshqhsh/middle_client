@@ -1,16 +1,9 @@
 import { FavoriteIcon } from 'assets/svgs'
 import Favorite from 'components/favorite'
 import { useState } from 'react'
-import { useMount } from 'react-use'
-import styles from './header.module.scss'
-import store from 'store'
-import { useAppSelector } from 'hooks'
-import { getFavorite } from 'states/favorite'
 
-interface Props {
-  itemId: string
-  src: string
-}
+import styles from './header.module.scss'
+
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
 
@@ -30,7 +23,7 @@ const Header = () => {
             <FavoriteIcon />
             <span>관심상품</span>
           </button>
-          {isOpen && <Favorite />}
+          {isOpen && <Favorite isOpen={isOpen} setIsOpen={setIsOpen} />}
         </div>
       </div>
     </div>
