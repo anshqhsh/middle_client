@@ -5,12 +5,6 @@ import { useState } from 'react'
 import styles from './header.module.scss'
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false)
-
-  const onClickOpenHandler = () => {
-    setIsOpen((_isOpen) => !_isOpen)
-  }
-
   return (
     <div>
       <div className={styles.headerMain}>
@@ -19,11 +13,7 @@ const Header = () => {
           <div className={styles.headerCenter}>
             <p>Desk-SetUp</p>
           </div>
-          <button type='button' className={styles.headerRight} onClick={onClickOpenHandler}>
-            <FavoriteIcon />
-            <span>관심상품</span>
-          </button>
-          {isOpen && <Favorite isOpen={isOpen} setIsOpen={setIsOpen} />}
+          <Favorite />
         </div>
       </div>
     </div>

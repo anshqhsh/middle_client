@@ -19,7 +19,7 @@ const FavoriteItem = ({ item }: Props) => {
   return (
     <li className={styles.productImg}>
       <img src={imgSrc} alt='img' />
-      <h4>{item}</h4>
+      <p>{item}</p>
     </li>
   )
 }

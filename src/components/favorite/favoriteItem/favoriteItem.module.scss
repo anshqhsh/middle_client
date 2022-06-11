@@ -6,4 +6,10 @@
   img {
     width: 80px;
   }
+
+  p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
 }
