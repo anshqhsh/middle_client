@@ -1,9 +1,9 @@
 import { useAppDispatch, useAppSelector } from 'hooks'
 import { useEffect, useRef } from 'react'
-import { useMount } from 'react-use'
 import { getFavorite, setItemId } from 'states/favorite'
 import styles from './favorite.module.scss'
 import store from 'store'
+import FavoriteItem from './favoriteItem'
 
 interface Props {
   isOpen: boolean
@@ -15,7 +15,7 @@ const Favorite = ({ isOpen, setIsOpen }: Props) => {
 
   const favoriteRef = useRef<HTMLDivElement>(null)
 
-  const deleteFavorite = () => {
+  const deleteAllFavorite = () => {
     dispatch(setItemId([]))
     store.set('favorite', [])
   }
@@ -30,28 +30,17 @@ const Favorite = ({ isOpen, setIsOpen }: Props) => {
     return () => {
       document.removeEventListener('mousedown', onClickOutside)
     }
-  }, [isOpen])
+  }, [isOpen, setIsOpen])
   return (
     <div className={styles.favoriteItem} ref={favoriteRef}>
       <ul>
-        {favoriteList.length !== 0 ? (
-          favoriteList.map((e) => {
-            return (
-              <li key={e}>
-                <img
-                  className={styles.productImg}
-                  src='https://s.pstatic.net/static/newsstand/2022/0526/article_img/new_main/9077/094552_001.jpeg'
-                  alt='img'
-                />
-                <h4>{e}</h4>
-              </li>
-            )
-          })
+        {favoriteList.length ? (
+          favoriteList.map((item) => <FavoriteItem key={item} item={item} />)
         ) : (
           <li>Empty Item</li>
         )}
       </ul>
-      <button className={styles.deleteBtn} type='button' onClick={deleteFavorite}>
+      <button className={styles.deleteBtn} type='button' onClick={deleteAllFavorite}>
         Delete All
       </button>
     </div>
