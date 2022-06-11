@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useQuery } from 'react-query'
 import { getYoutubeVideoApi } from 'services/youtube'
 
@@ -7,12 +7,13 @@ import YoutubeItem from './YoutubeItem'
 import YoutubePlayer from './YoutubePlayer'
 
 import styles from './youtube.module.scss'
+import { useAppSelector } from 'hooks'
+import { getYoutube } from 'states/youtube'
 
 const Youtube = () => {
   const [videoId, setVideoId] = useState('')
-  const maxResults = 4
-  const q = '허먼밀러'
 
+  const { maxResults, q } = useAppSelector(getYoutube)
   const { data, isLoading } = useQuery(
     ['getYoutubeVideoApi', maxResults, q],
     () => getYoutubeVideoApi({ maxResults, q }).then((res) => res.data.items),
@@ -28,6 +29,7 @@ const Youtube = () => {
       },
     }
   )
+
   if (!data) return null
   if (isLoading) return <div>Loading...</div>
 
@@ -45,7 +47,7 @@ const Youtube = () => {
           )
         })}
       </div>
-      {videoId ? <YoutubePlayer videoId={videoId} /> : null}
+      <YoutubePlayer videoId={videoId} />
     </div>
   )
 }

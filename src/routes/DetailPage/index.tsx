@@ -5,9 +5,9 @@ import 'slick-carousel/slick/slick-theme.css'
 import SliderItem from 'components/SliderItem'
 import ProductList from '../../components/ProductList'
 import Youtube from 'components/Youtube'
-import store from 'store'
-import { useState } from 'react'
-import { useMount } from 'react-use'
+
+import { Suspense } from 'react'
+
 import { SliderSrcs } from 'assets/image'
 
 const settings = {
@@ -28,7 +28,9 @@ const DetailPage = () => {
           })}
         </Slider>
         <ProductList />
-        <Youtube />
+        <Suspense fallback={<div>Loading</div>}>
+          <Youtube />
+        </Suspense>
       </div>
     </div>
   )

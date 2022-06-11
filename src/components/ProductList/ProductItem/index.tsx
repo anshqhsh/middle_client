@@ -15,7 +15,10 @@ interface Props {
 const ProductItem = ({ itemId, src }: Props) => {
   const dispatch = useAppDispatch()
   const favoriteList = [...useAppSelector(getFavorite)]
-
+  console.log(useAppSelector(getYoutube))
+  const onClick = () => {
+    dispatch(setYoutube({ q: itemId, maxResults: 3 }))
+  }
   const onClickHandller = () => {
     const findIdx = favoriteList.findIndex((e) => e === itemId)
 
@@ -29,7 +32,7 @@ const ProductItem = ({ itemId, src }: Props) => {
 
   return (
     <div className={styles.productWrapper}>
-      <div className={styles.imageWrapper}>
+      <div className={styles.imageWrapper} role='presentation' onClick={onClick}>
         <img className={styles.productImg} src={src} alt='img' />
       </div>
       <div className={styles.infoBox}>
