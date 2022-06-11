@@ -9,6 +9,7 @@ import YoutubePlayer from './YoutubePlayer'
 import styles from './youtube.module.scss'
 import { useAppSelector } from 'hooks'
 import { getYoutube } from 'states/youtube'
+import LoadingSpiner from 'components/LoadingSpiner/LodingSpiner'
 
 const Youtube = () => {
   const [videoId, setVideoId] = useState('')
@@ -29,12 +30,12 @@ const Youtube = () => {
       },
     }
   )
-
   if (!data) return null
   if (isLoading) return <div>Loading...</div>
 
   return (
-    <div>
+    <div className={styles.youtubeContainer}>
+      <h2 className={styles.ytItemTitle}>상품관련 영상</h2>
       <div className={styles.ytItemContainer}>
         {data.map((item) => {
           return (
@@ -47,7 +48,9 @@ const Youtube = () => {
           )
         })}
       </div>
-      <YoutubePlayer videoId={videoId} />
+      <div className={styles.ytPlayerContainer}>
+        {videoId ? <YoutubePlayer videoId={videoId} /> : <div className={styles.initPlayer}>영상을 선택해주세요</div>}
+      </div>
     </div>
   )
 }

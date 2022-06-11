@@ -1,0 +1,60 @@
+@use '/src/styles/constants/colors';
+
+.loader {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin: 20px;
+
+  span {
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    margin: 0;
+    border: 0;
+    border-radius: 50%;
+    transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.555);
+    animation: spin 2s ease infinite;
+  }
+
+  .fist {
+    background-color: colors.$LODING_SPINER_1;
+    animation-delay: -1.5s;
+  }
+
+  .second {
+    background-color: colors.$LODING_SPINER_2;
+    animation-delay: -1s;
+  }
+
+  .third {
+    background-color: colors.$LODING_SPINER_3;
+    animation-delay: -0.5s;
+  }
+
+  .forth {
+    background-color: colors.$LODING_SPINER_4;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: translate(0) scale(0);
+    }
+
+    25% {
+      transform: translate(200%) scale(1.5);
+    }
+
+    50% {
+      transform: translate(200%, 200%) scale(0);
+    }
+
+    75% {
+      transform: translate(0, 200%) scale(1.5);
+    }
+
+    100% {
+      transform: translate(0) scale(0);
+    }
+  }
+}

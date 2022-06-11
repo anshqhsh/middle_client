@@ -6,9 +6,12 @@ import styles from './productList.module.scss'
 const ProductList = () => {
   return (
     <div className={styles.productContainer}>
-      {ImgSrcs.map((item) => (
-        <ProductItem key={`${item.itemId} key`} itemId={item.itemId} src={item.src} />
-      ))}
+      <h2>추천 제품</h2>
+      <div className={styles.productItemWrapper}>
+        {ImgSrcs.map((item) => (
+          <ProductItem key={`${item.itemId} key`} itemId={item.itemId} src={item.src} />
+        ))}
+      </div>
     </div>
   )
 }

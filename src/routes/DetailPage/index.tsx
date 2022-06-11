@@ -9,6 +9,7 @@ import Youtube from 'components/Youtube'
 import { Suspense } from 'react'
 
 import { SliderSrcs } from 'assets/image'
+import LoadingSpiner from 'components/LoadingSpiner/LodingSpiner'
 
 const settings = {
   dots: true,
@@ -21,14 +22,14 @@ const settings = {
 const DetailPage = () => {
   return (
     <div className={styles.content}>
-      <div className={styles.img_container}>
+      <div className={styles.imgContainer}>
         <Slider {...settings}>
           {SliderSrcs.map((value) => {
             return <SliderItem key={value} src={value} />
           })}
         </Slider>
         <ProductList />
-        <Suspense fallback={<div>Loading</div>}>
+        <Suspense fallback={<LoadingSpiner />}>
           <Youtube />
         </Suspense>
       </div>
