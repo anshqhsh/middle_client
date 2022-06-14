@@ -48,11 +48,14 @@ const CommentsList = () => {
     //   return newMsg
     // })
   }
-  const updateData = () => {
+  const updateData = (data: any) => {
     console.log('updateData')
+    console.log(data)
   }
-  const createData = () => {
+  const createData = (data: any) => {
     console.log('createData')
+    console.log(data)
+    dispatch(creatNewComment(data))
   }
   const deleteData = () => {
     console.log('delete')

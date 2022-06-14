@@ -1,6 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit'
+import { timeStamp } from 'console'
+import dayjs from 'dayjs'
 import { RootState } from 'states'
 import store from 'store'
+import { v4 } from 'uuid'
 
 export interface IComments {
   id: string
@@ -65,9 +68,16 @@ const commentSlice = createSlice({
   initialState: INITIAL_STATE,
   reducers: {
     creatNewComment: (state, action) => {
-      const newSetComments = [state, action.payload]
+      const { userId } = store.get('userData')
+      const newComment = {
+        id: v4(),
+        userId,
+        timeStamp: dayjs().diff,
+        text: action.payload,
+        comments: [],
+      }
+      const newSetComments = [...state.data, newComment]
       store.set('comments', newSetComments)
-      console.log(state.data)
     },
     deleteComment: () => {
       store.set('comments', INITIAL_STATE)

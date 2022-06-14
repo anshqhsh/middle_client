@@ -6,11 +6,12 @@ import SliderItem from 'components/SliderItem'
 import ProductList from '../../components/ProductList'
 import Youtube from 'components/Youtube'
 
-import { Suspense } from 'react'
-
+import { Suspense, useEffect } from 'react'
+import store from 'store'
 import { SliderSrcs } from 'assets/image'
 import LoadingSpiner from 'components/LoadingSpiner/LodingSpiner'
 import CommentsList from 'components/Comments'
+import { useMount } from 'react-use'
 
 const settings = {
   dots: true,
@@ -21,6 +22,9 @@ const settings = {
 }
 
 const DetailPage = () => {
+  useMount(() => {
+    store.set('userData', { userId: 'kim' })
+  })
   return (
     <div className={styles.content}>
       <div className={styles.imgContainer}>
