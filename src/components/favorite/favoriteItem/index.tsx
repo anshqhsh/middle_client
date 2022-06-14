@@ -13,7 +13,7 @@ const FavoriteItem = ({ item }: Props) => {
   )
   useMount(() => {
     ImgSrcs.map((e) => {
-      e.itemId === item && setImgSrc(e.src)
+      return e.itemId === item && setImgSrc(e.src)
     })
   })
   return (

@@ -4,11 +4,11 @@ import styles from './commentInput.module.scss'
 interface Props {
   update: boolean
   text?: string
-  updateData: any
   createData: any
-  setIsEdit?: any
+  updateData?: any
+  setIsEdit?: React.Dispatch<React.SetStateAction<boolean>>
 }
-const CommentInput = ({ update, text, updateData, createData, setIsEdit }: Props) => {
+const CommentInput = ({ update, text, createData, updateData, setIsEdit }: Props) => {
   const [inputText, setInputText] = useState('')
 
   const onChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
@@ -22,7 +22,7 @@ const CommentInput = ({ update, text, updateData, createData, setIsEdit }: Props
     } else {
       createData(inputText)
     }
-    setIsEdit(false)
+    setIsEdit && setIsEdit(false)
   }
   return (
     <form className={styles.commentInputForm} onSubmit={onSubmit}>

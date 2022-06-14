@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { timeStamp } from 'console'
 import dayjs from 'dayjs'
 import { RootState } from 'states'
 import store from 'store'
@@ -78,14 +77,26 @@ const commentSlice = createSlice({
       }
       const newSetComments = [...state.data, newComment]
       store.set('comments', newSetComments)
+      state.data = newSetComments
     },
-    deleteComment: () => {
-      store.set('comments', INITIAL_STATE)
+    updateComment: (state, action) => {
+      const comments = [...state.data]
+      const targetIndex = state.data.findIndex((comment: any) => comment.id === action.payload.id)
+      comments[targetIndex].text = action.payload.text
+      store.set('comments', comments)
+      state.data = comments
+    },
+    deleteComment: (state, action) => {
+      const comments = [...state.data]
+      const targetIndex = state.data.findIndex((comment: any) => comment.id === action.payload)
+      comments.splice(targetIndex, 1)
+      store.set('comments', comments)
+      state.data = comments
     },
   },
 })
 
-export const { creatNewComment } = commentSlice.actions
+export const { creatNewComment, updateComment, deleteComment } = commentSlice.actions
 export default commentSlice.reducer
 
 export const getComments = (state: RootState) => state.comments.data

@@ -1,20 +1,27 @@
-import { IComments } from 'states/comments'
+import { deleteComment, IComments, updateComment } from 'states/comments'
 import dayjs from 'dayjs'
 import { useState } from 'react'
 
 import styles from './commentItem.module.scss'
 import CommentInput from '../CommentInput'
+import { useAppDispatch } from 'hooks'
 
 interface Props {
   data: IComments
-  updateData: any
   createData: any
-  deleteData: any
 }
-const CommentItem = ({ data, updateData, createData, deleteData }: Props) => {
+const CommentItem = ({ data, createData }: Props) => {
   const [isEdit, setIsEdit] = useState(false)
+  const dispatch = useAppDispatch()
   const editHandller = () => {
     setIsEdit(true)
+  }
+
+  const deleteData = () => {
+    dispatch(deleteComment(data.id))
+  }
+  const updateData = (text: string) => {
+    dispatch(updateComment({ id: data.id, text }))
   }
 
   return (
