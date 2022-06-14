@@ -1,0 +1,38 @@
+[      
+  {
+    "id": "1",
+    "userId": "kim",
+    "timestamp": 1234569630123,
+    "text": "1",
+    "comments": [
+      {          
+        "id": "1_1",
+        "userId": "kim",
+        "timestamp": 1234569630123,
+        "text": "1_1 데이터 확인",
+        "comments": []
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "userId": "kim",
+    "timestamp": 1234569570123,
+    "text": "2",
+    "comments":[]
+  },
+  {
+    "id": "3",
+    "userId": "kim",
+    "timestamp": 1234569510123,
+    "text": "3",
+    "comments":[]
+  },
+  {
+    "id": "4",
+    "userId": "kim",
+    "timestamp": 1234569630123,
+    "text": "4",
+    "comments":[]
+  } 
+]

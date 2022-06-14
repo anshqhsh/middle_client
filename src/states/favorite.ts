@@ -13,7 +13,6 @@ const favoriteSlice = createSlice({
   reducers: {
     setItemId: (state, action) => {
       const newSetFavorite = action.payload
-
       store.set('favorite', newSetFavorite)
       state.favoriteItemIds = newSetFavorite
     },
@@ -24,7 +23,7 @@ const favoriteSlice = createSlice({
   },
 })
 
-export const { setItemId } = favoriteSlice.actions
+export const { setItemId, resetItemId } = favoriteSlice.actions
 export default favoriteSlice.reducer
 
 export const getFavorite = (state: RootState) => state.favorite.favoriteItemIds

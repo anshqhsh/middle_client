@@ -4,7 +4,7 @@
 Middle : 나랑 비슷한 취향을 가진 사람의 물건을 확인하고 관련 정보들을 스크랩 가능 스크랩 가능
 
 ### Deploy
-- Netlify - 현재 이미지 오류... 
+- Netlify 최신화 중
 - https://629c5949fd78671079ac9bd9--super-cool-site-by-anshqhsh.netlify.app/
 
 ### Skill

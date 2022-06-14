@@ -10,6 +10,7 @@ import { Suspense } from 'react'
 
 import { SliderSrcs } from 'assets/image'
 import LoadingSpiner from 'components/LoadingSpiner/LodingSpiner'
+import CommentsList from 'components/Comments'
 
 const settings = {
   dots: true,
@@ -32,6 +33,7 @@ const DetailPage = () => {
         <Suspense fallback={<LoadingSpiner />}>
           <Youtube />
         </Suspense>
+        <CommentsList />
       </div>
     </div>
   )

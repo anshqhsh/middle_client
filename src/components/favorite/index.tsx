@@ -6,10 +6,6 @@ import store from 'store'
 import FavoriteItem from './favoriteItem'
 import { FavoriteIcon } from 'assets/svgs'
 
-interface Props {
-  isOpen: boolean
-  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>
-}
 const Favorite = () => {
   const [isOpen, setIsOpen] = useState(false)
 
@@ -43,7 +39,6 @@ const Favorite = () => {
         <FavoriteIcon />
         <span>관심상품</span>
       </button>
-
       {isOpen && (
         <div className={styles.favoriteItem}>
           <ul>
