@@ -1,7 +1,6 @@
 import { deleteComment, IComments, updateComment } from 'states/comments'
 import dayjs from 'dayjs'
 import { useState } from 'react'
-import store from 'store'
 import styles from './commentItem.module.scss'
 import CommentInput from '../CommentInput'
 import { useAppDispatch } from 'hooks'
