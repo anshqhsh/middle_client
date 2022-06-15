@@ -8,11 +8,13 @@ import { useAppDispatch } from 'hooks'
 
 interface Props {
   data: IComments
+  userId: string
   createData: any
 }
-const CommentItem = ({ data, createData }: Props) => {
+const CommentItem = ({ data, userId, createData }: Props) => {
   const [isEdit, setIsEdit] = useState(false)
   const dispatch = useAppDispatch()
+
   const editHandller = () => {
     setIsEdit(true)
   }
@@ -37,7 +39,7 @@ const CommentItem = ({ data, createData }: Props) => {
               <sub>{dayjs(data.timestamp).format('YYYY-MM-DD ddd HH:mm')}</sub>
             </div>
           </div>
-          {store.get('userData')?.userId === data.userId && (
+          {userId === data.userId && (
             <div className={styles.messagesBtn}>
               <button onClick={editHandller} type='button'>
                 수정
