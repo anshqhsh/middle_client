@@ -6,7 +6,7 @@ import SliderItem from 'components/SliderItem'
 import ProductList from '../../components/ProductList'
 import Youtube from 'components/Youtube'
 
-import { Suspense, useEffect } from 'react'
+import { Suspense } from 'react'
 import store from 'store'
 import { SliderSrcs } from 'assets/image'
 import LoadingSpiner from 'components/LoadingSpiner/LodingSpiner'
@@ -23,7 +23,7 @@ const settings = {
 
 const DetailPage = () => {
   useMount(() => {
-    store.set('userData', { userId: 'kim' })
+    !store.get('userData') && store.set('userData', { userId: 'kim' })
   })
   return (
     <div className={styles.content}>

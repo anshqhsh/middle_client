@@ -1,10 +1,10 @@
 import { FavoriteIcon } from 'assets/svgs'
-import store from 'store'
+
 import styles from './productItem.module.scss'
 import { useAppDispatch, useAppSelector } from 'hooks'
 import { getFavorite, setItemId } from 'states/favorite'
 import { useEffect, useState } from 'react'
-import { getYoutube, setYoutube } from 'states/youtube'
+import { setYoutube } from 'states/youtube'
 import _ from 'lodash'
 
 interface Props {

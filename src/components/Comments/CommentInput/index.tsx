@@ -23,10 +23,11 @@ const CommentInput = ({ update, text, createData, updateData, setIsEdit }: Props
       createData(inputText)
     }
     setIsEdit && setIsEdit(false)
+    setInputText('')
   }
   return (
     <form className={styles.commentInputForm} onSubmit={onSubmit}>
-      <textarea onChange={onChange} defaultValue={text} placeholder='내용을 입력하세요' />
+      <textarea onChange={onChange} defaultValue={text} value={inputText} placeholder='내용을 입력하세요' />
       <button className={styles.submitBtn} type='submit'>
         완료
       </button>

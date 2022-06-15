@@ -1,6 +1,4 @@
-import { FavoriteIcon } from 'assets/svgs'
 import Favorite from 'components/favorite'
-import { useState } from 'react'
 
 import styles from './header.module.scss'
 

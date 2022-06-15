@@ -1,7 +1,7 @@
 import { deleteComment, IComments, updateComment } from 'states/comments'
 import dayjs from 'dayjs'
 import { useState } from 'react'
-
+import store from 'store'
 import styles from './commentItem.module.scss'
 import CommentInput from '../CommentInput'
 import { useAppDispatch } from 'hooks'
@@ -37,14 +37,16 @@ const CommentItem = ({ data, createData }: Props) => {
               <sub>{dayjs(data.timestamp).format('YYYY-MM-DD ddd HH:mm')}</sub>
             </div>
           </div>
-          <div className={styles.messagesBtn}>
-            <button onClick={editHandller} type='button'>
-              수정
-            </button>
-            <button onClick={deleteData} type='button'>
-              삭제
-            </button>
-          </div>
+          {store.get('userData').userId === data.userId && (
+            <div className={styles.messagesBtn}>
+              <button onClick={editHandller} type='button'>
+                수정
+              </button>
+              <button onClick={deleteData} type='button'>
+                삭제
+              </button>
+            </div>
+          )}
         </div>
       )}
     </li>
