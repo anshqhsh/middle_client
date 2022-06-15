@@ -1,13 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
 
-import system from './system'
 import favorite from './favorite'
 import youtube from './youtube'
 import comments from './comments'
 
 export const store = configureStore({
   reducer: {
-    system,
     favorite,
     youtube,
     comments,

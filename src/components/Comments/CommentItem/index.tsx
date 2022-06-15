@@ -37,7 +37,7 @@ const CommentItem = ({ data, createData }: Props) => {
               <sub>{dayjs(data.timestamp).format('YYYY-MM-DD ddd HH:mm')}</sub>
             </div>
           </div>
-          {store.get('userData').userId === data.userId && (
+          {store.get('userData')?.userId === data.userId && (
             <div className={styles.messagesBtn}>
               <button onClick={editHandller} type='button'>
                 수정
