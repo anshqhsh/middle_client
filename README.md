@@ -4,8 +4,8 @@
 Middle : 나랑 비슷한 취향을 가진 사람의 물건을 확인하고 관련 정보들을 스크랩 가능 스크랩 가능
 
 ### Deploy
-- Netlify 최신화 중
-- https://629c5949fd78671079ac9bd9--super-cool-site-by-anshqhsh.netlify.app/
+[![Netlify Status](https://api.netlify.com/api/v1/badges/64ce6a32-2368-4e7f-9b47-ed57232852f9/deploy-status)](https://app.netlify.com/sites/middleclient/deploys)
+
 
 ### Skill
 
