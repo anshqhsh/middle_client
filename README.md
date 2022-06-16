@@ -75,6 +75,12 @@ middle_client
 - 관심상품 데이터를 localstorage로 관리
 - 댓글 기능 
 
+### 작동 화면
+| Carousel & 관심상품 | Youtube | 댓글 기능 |
+|:---:|:---:|:---:|
+|![4](https://user-images.githubusercontent.com/60730765/174062870-f165e9ba-8120-4072-b8f7-1680f977d5b9.gif)|![2](https://user-images.githubusercontent.com/60730765/174062353-435e8688-0a8e-40a1-a5bc-99f9d7d47c4f.gif)|![3](https://user-images.githubusercontent.com/60730765/174062339-cea97e7c-185e-4398-92c6-2c2fb27fab90.gif)
+
+
 
 ### 구현 상세
 > Carousel
