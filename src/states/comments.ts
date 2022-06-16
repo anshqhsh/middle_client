@@ -25,9 +25,9 @@ export interface ICommentsInit {
 const commentsInit = [
   {
     id: '1',
-    userId: 'kim',
+    userId: 'lee',
     timestamp: 1234569630123,
-    text: '1',
+    text: '에어론 앉고 허리 디스크가 나아졌어요!',
     comments: [
       {
         id: '1_1',
@@ -42,21 +42,21 @@ const commentsInit = [
     id: '2',
     userId: 'kim',
     timestamp: 1234569570123,
-    text: '2',
+    text: '데스크 셋업에 관심 많아서 추천제품 즐찾하고 갑니다~',
     comments: [],
   },
   {
     id: '3',
     userId: 'kim',
     timestamp: 1234569510123,
-    text: '3',
+    text: '오디오엔진 가성비👍',
     comments: [],
   },
   {
     id: '4',
-    userId: 'kim',
+    userId: 'lee',
     timestamp: 1234569630123,
-    text: '4',
+    text: '맥북 주는 회사 들어가고 싶어요....',
     comments: [],
   },
 ]
