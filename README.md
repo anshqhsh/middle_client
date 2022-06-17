@@ -80,7 +80,13 @@ middle_client
 |:---:|:---:|:---:|
 |![4](https://user-images.githubusercontent.com/60730765/174062870-f165e9ba-8120-4072-b8f7-1680f977d5b9.gif)|![2](https://user-images.githubusercontent.com/60730765/174062353-435e8688-0a8e-40a1-a5bc-99f9d7d47c4f.gif)|![3](https://user-images.githubusercontent.com/60730765/174062339-cea97e7c-185e-4398-92c6-2c2fb27fab90.gif)
 
-
+### 실행방법 
+```
+  git clone https://github.com/anshqhsh/middle_client.git
+  .env.copy에 youtubekey값 : AIzaSyDC76DgLDO1ox8xfEpkvztfmI5YNRKrt-k 를 입력하고 .env로 파일명을 변경
+  
+  yarn & yarn start
+```
 
 ### 구현 상세
 > Carousel
