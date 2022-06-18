@@ -14,18 +14,19 @@
 
 .ytItemContainer {
   display: flex;
+  flex-wrap: wrap;
   overflow: scroll;
 }
 
 .ytPlayerContainer {
-  width: 90%;
+  width: 100%;
 
   .initPlayer {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 200px;
+    height: 400px;
     font-size: 24px;
     font-weight: bold;
     color: colors.$WHITE;

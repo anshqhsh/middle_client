@@ -14,7 +14,7 @@ interface IItem {
   snippet: ISnippet
 }
 
-interface ISnippet {
+export interface ISnippet {
   publishedAt: string
   channelId: string
   title: string
@@ -25,19 +25,19 @@ interface ISnippet {
   publishTime: string
 }
 
-interface IThumbnails {
+export interface IThumbnails {
   default: IDefault
   medium: IDefault
   high: IDefault
 }
 
-interface IDefault {
+export interface IDefault {
   url: string
   width: number
   height: number
 }
 
-interface IId {
+export interface IId {
   kind: string
   videoId: string
 }

@@ -5,7 +5,7 @@ export interface IYoutube {
   q: string
   maxResults: number
 }
-const INITIAL_STATE: IYoutube = { q: '허먼밀러', maxResults: 4 }
+const INITIAL_STATE: IYoutube = { q: '허먼밀러', maxResults: 10 }
 
 const youtubeSlice = createSlice({
   name: 'youtube',

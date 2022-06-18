@@ -10,8 +10,8 @@ interface Props {
 const Article = ({ title, firstParagraph, secondParagraph, thirdParagraph }: Props) => {
   return (
     <article className={styles.article}>
-      <h1>{title}</h1>
-      <p>{firstParagraph}</p>
+      <h2>{title}</h2>
+      <p className={styles.firstParagraph}>- {firstParagraph}</p>
       <br />
       <p>{secondParagraph}</p>
       <br />

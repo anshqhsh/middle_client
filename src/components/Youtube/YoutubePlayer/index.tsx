@@ -14,7 +14,7 @@ const YoutubePlayer = ({ videoId }: Props) => {
           // type='text/html'
           title='youtube video'
           width='100%'
-          height='500'
+          height='400'
           src={`https://www.youtube.com/embed/${videoId}`}
           frameBorder='0'
           allowFullScreen

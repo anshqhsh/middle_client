@@ -14,6 +14,7 @@ const Youtube = () => {
   const [videoId, setVideoId] = useState('')
 
   const { maxResults, q } = useAppSelector(getYoutube)
+
   const { data, isLoading, error } = useQuery(
     ['getYoutubeVideoApi', maxResults, q],
     () => getYoutubeVideoApi({ maxResults, q }).then((res) => res.data.items),
@@ -32,6 +33,7 @@ const Youtube = () => {
   if (!data) return null
   if (isLoading) return <div>Loading...</div>
   if (error) return <div>error</div>
+
   return (
     <div className={styles.youtubeContainer}>
       <h2 className={styles.ytItemTitle}>상품관련 영상</h2>
