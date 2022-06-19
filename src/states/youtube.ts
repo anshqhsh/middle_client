@@ -16,10 +16,13 @@ const youtubeSlice = createSlice({
       state.q = newQuery.q
       state.maxResults = newQuery.maxResults
     },
+    setMaxResults: (state, action) => {
+      state.maxResults = action.payload
+    },
   },
 })
 
-export const { setYoutube } = youtubeSlice.actions
+export const { setYoutube, setMaxResults } = youtubeSlice.actions
 export default youtubeSlice.reducer
 
 export const getYoutube = (state: RootState) => state.youtube

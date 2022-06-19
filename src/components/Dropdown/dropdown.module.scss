@@ -1,0 +1,52 @@
+@use '/src/styles/constants/colors';
+
+.dropdownContainer {
+  position: relative;
+  z-index: 100;
+  width: 80px;
+  height: 30px;
+  color: colors.$BLACK;
+  background-color: colors.$WHITE;
+  border: 1px solid colors.$BORDER_GRAY;
+  border-radius: 2px;
+}
+
+.selectedBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.dropdownWrap {
+  position: absolute;
+  top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  background-color: colors.$WHITE;
+
+  li :hover {
+    color: colors.$WHITE;
+    background-color: colors.$BORDER_BLACK;
+  }
+}
+
+.dropdownMenu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 30px;
+  margin-left: auto;
+  cursor: pointer;
+
+  button {
+    width: 100%;
+    height: 100%;
+  }
+}

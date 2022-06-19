@@ -9,6 +9,7 @@ import YoutubePlayer from './YoutubePlayer'
 import styles from './youtube.module.scss'
 import { useAppSelector } from 'hooks'
 import { getYoutube } from 'states/youtube'
+import Dropdown from 'components/Dropdown'
 
 const Youtube = () => {
   const [videoId, setVideoId] = useState('')
@@ -37,6 +38,7 @@ const Youtube = () => {
   return (
     <div className={styles.youtubeContainer}>
       <h2 className={styles.ytItemTitle}>상품관련 영상</h2>
+      <Dropdown />
       <div className={styles.ytItemContainer}>
         {data.map((item) => {
           return (
