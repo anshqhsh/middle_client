@@ -1,17 +1,16 @@
+import { IArticle } from 'states/article'
 import styles from './article.module.scss'
 
-interface Props {
-  title: string
-  firstParagraph: string
-  secondParagraph?: string
-  thirdParagraph?: string
+export interface Props {
+  data: IArticle
 }
 
-const Article = ({ title, firstParagraph, secondParagraph, thirdParagraph }: Props) => {
+const Article = ({ data }: Props) => {
+  const { title, firstParagraph, secondParagraph, thirdParagraph } = data
   return (
     <article className={styles.article}>
       <h2>{title}</h2>
-      <p className={styles.firstParagraph}>- {firstParagraph}</p>
+      <p className={styles.firstParagraph}>{firstParagraph}</p>
       <br />
       <p>{secondParagraph}</p>
       <br />

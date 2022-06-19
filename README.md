@@ -102,7 +102,7 @@ middle_client
 
 >상품관련 영상
 
-추천제품에서 아이템을 선택하여 받아온 값을 이용하여 youtube Api를 react-query로 호출 하면 관련영상 상위 4개의 영상의 썸네일이 보이고 각 썸네일을 선택하면 하단의 youtube player에서 값이 세팅 되어 재생 가능 합니다. 
+추천제품에서 아이템을 선택하여 받아온 값을 이용하여 youtube Api를 react-query로 호출 하면 관련영상 기본적으로 상위 4개의 영상의 썸네일이 보이고 dropdown을 이용하여 영상 갯수를 선택하여 불러올 수 있습니다. reactquery를 이용하여 각 숫자를 클릭했을때 데이터가 캐싱되어 있어 staletime을 이용하여 dropdown 숫자를 바꿀때 마다 호출 하지않고 설정한 staletime 지난 후에 api를 재 호출 합니다. 각 썸네일을 선택하면 하단의 youtube player에서 값이 세팅 되어 재생 가능 합니다. 
 
 >댓글 기능 
 
