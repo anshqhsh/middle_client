@@ -23,6 +23,7 @@ const Youtube = () => {
       refetchOnWindowFocus: false,
       suspense: true,
       useErrorBoundary: true,
+      staleTime: 6 * 10 * 1000,
       onError(err) {
         if (isAxiosError(err)) {
           // eslint-disable-next-line no-console
