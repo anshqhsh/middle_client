@@ -4,11 +4,18 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  max-width: 350px;
+  padding: 10px 20px 50px;
   margin-top: 200px;
-  background-color: red;
+  border: 1px solid gray;
+  border-radius: 10px;
 
-  h1 {
-    font-size: 2rem;
+  .titleWrap {
+    padding: 40px 0;
+
+    h1 {
+      font-size: 2rem;
+    }
   }
 }
 
@@ -16,18 +23,42 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+
+  label {
+    position: relative;
+    flex: 1 0 0;
+    width: 90%;
+    height: 36px;
+    margin-bottom: 10px;
+  }
+
+  span {
+    position: absolute;
+    right: 0;
+    left: 8px;
+    height: 36px;
+    overflow: hidden;
+    font-size: 12px;
+    line-height: 36px;
+    color: rgba(var(--f52, 142, 142, 142), 1);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    pointer-events: none;
+  }
 
   input {
-    width: 100px;
+    width: 100%;
     height: 40px;
-    margin: 10px;
     border: 1px solid beige;
+    border-radius: 4px;
   }
 
   button {
-    width: 100px;
+    width: 90%;
     height: 40px;
     margin: 10px;
     border: 1px solid blue;
+    border-radius: 4px;
   }
 }
