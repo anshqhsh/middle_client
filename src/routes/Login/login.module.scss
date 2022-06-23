@@ -39,7 +39,7 @@
     left: 8px;
     height: 36px;
     overflow: hidden;
-    font-size: 12px;
+    font-size: 10px;
     line-height: 36px;
     color: rgba(var(--f52, 142, 142, 142), 1);
     text-overflow: ellipsis;
@@ -52,6 +52,8 @@
     height: 40px;
     border: 1px solid beige;
     border-radius: 4px;
+    // font-size: 12px;
+    // padding: 14px 0 2px 8px!important;
   }
 
   button {
