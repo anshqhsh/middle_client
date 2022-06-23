@@ -1,4 +1,5 @@
-import { useCallback, useState } from 'react'
+import { CheckCircle, Eye } from 'assets/svgs'
+import { useState } from 'react'
 import styles from './login.module.scss'
 
 const Login = () => {
@@ -20,8 +21,19 @@ const Login = () => {
     const { value } = e.currentTarget
     checkRgexId(value)
   }
-  const onBlurHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const onBlurIdHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     vaildEmail && setIdTxt(e.currentTarget.value)
+    // eslint-disable-next-line no-console
+    console.log(idTxt)
+  }
+  const onBlurPwHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPwTxt(e.currentTarget.value)
+    // eslint-disable-next-line no-console
+    console.log(pwTxt)
+  }
+  const onShowPw = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault()
+    setShowPwd((_showPew) => !_showPew)
   }
 
   return (
@@ -33,14 +45,52 @@ const Login = () => {
         <div className={styles.labelWrap}>
           <label>
             <span>전화번호, 사용자 이름 또는 이메일</span>
-            <input name='id' type='text' onChange={onChangeHandler} onBlur={onBlurHandler} />
+            <input name='id' type='text' onChange={onChangeHandler} onBlur={onBlurIdHandler} />
           </label>
+          {vaildEmail ? (
+            <CheckCircle
+              style={{
+                width: '20px',
+                fill: 'darkcyan',
+              }}
+            />
+          ) : (
+            <CheckCircle
+              style={{
+                width: '20px',
+                fill: 'red',
+              }}
+            />
+          )}
         </div>
-        <label>
-          <span>비밀 번호</span>
-          <input type='text' />
-        </label>
-        <button type='submit'>로그인</button>
+        <div className={styles.labelWrap}>
+          <label>
+            <span>비밀 번호</span>
+            <input name='password' type={!showPwd ? 'password' : 'text'} onBlur={onBlurPwHandler} />
+          </label>
+          <button type='button' onClick={onShowPw}>
+            {showPwd ? (
+              <Eye
+                style={{
+                  display: 'inline',
+                  width: '20px',
+                  fill: 'darkcyan',
+                }}
+              />
+            ) : (
+              <Eye
+                style={{
+                  display: 'inline',
+                  width: '20px',
+                }}
+              />
+            )}
+          </button>
+        </div>
+
+        <button className={styles.loginBtn} type='submit'>
+          로그인
+        </button>
       </form>
       <div>
         <div>

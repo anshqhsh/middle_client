@@ -1,3 +1,5 @@
+@use '/src/styles/constants/colors';
+
 .loginContainer {
   display: flex;
   flex-direction: column;
@@ -7,7 +9,7 @@
   max-width: 350px;
   padding: 10px 20px 50px;
   margin-top: 200px;
-  border: 1px solid gray;
+  border: 1px solid colors.$BORDER_GRAY;
   border-radius: 10px;
 
   .titleWrap {
@@ -23,15 +25,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-
-  label {
-    position: relative;
-    flex: 1 0 0;
-    width: 90%;
-    height: 36px;
-    margin-bottom: 10px;
-  }
+  // width: 100%;
 
   span {
     position: absolute;
@@ -41,7 +35,7 @@
     overflow: hidden;
     font-size: 10px;
     line-height: 36px;
-    color: rgba(var(--f52, 142, 142, 142), 1);
+    color: colors.$BORDER_GRAY;
     text-overflow: ellipsis;
     white-space: nowrap;
     pointer-events: none;
@@ -50,17 +44,28 @@
   input {
     width: 100%;
     height: 40px;
-    border: 1px solid beige;
     border-radius: 4px;
     // font-size: 12px;
     // padding: 14px 0 2px 8px!important;
   }
+}
 
-  button {
-    width: 90%;
-    height: 40px;
-    margin: 10px;
-    border: 1px solid blue;
-    border-radius: 4px;
-  }
+.loginBtn {
+  width: 90%;
+  height: 40px;
+  margin: 10px;
+  border: 1px solid colors.$BORDER_GRAY;
+  border-radius: 4px;
+}
+
+.labelWrap {
+  position: relative;
+  display: flex;
+  flex: 1 0 0;
+  justify-content: space-between;
+  width: 90%;
+  height: 36px;
+  padding: 0 10px;
+  margin-bottom: 10px;
+  border: 1px solid colors.$BORDER_GRAY;
 }
