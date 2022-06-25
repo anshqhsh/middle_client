@@ -1,4 +1,45 @@
+@use '/src/styles/constants/colors';
+
 .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 600px;
   padding: 10px;
   margin: 100px;
+}
+
+.section {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translate(-50%, -50%);
+}
+
+.text {
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 20px;
+  font-size: 14px;
+
+  &::after {
+    position: absolute;
+    top: -1.9px;
+    right: -13px;
+    display: block;
+    content: ':(';
+  }
+}
+
+.backBtn {
+  width: 120px;
+  height: 44px;
+  font-size: 14px;
+  color: colors.$WHITE;
+  cursor: pointer;
+  background-color: colors.$GREEN;
+  border-radius: 44px;
 }

@@ -10,8 +10,8 @@ const ErrorPage = () => {
     <div className={styles.container}>
       <section className={styles.section}>
         <h1>404 에러 페이지</h1>
-        <p>페이지를 찾을 수 없습니다.</p>
-        <button type='button' onClick={backHandler}>
+        <p className={styles.text}>페이지를 찾을 수 없습니다.</p>
+        <button className={styles.backBtn} type='button' onClick={backHandler}>
           이전 페이지
         </button>
       </section>
