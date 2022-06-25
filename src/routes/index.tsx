@@ -3,6 +3,7 @@ import Layout from 'components/layout'
 import { Routes, Route } from 'react-router-dom'
 
 import DetailPage from './DetailPage'
+import ErrorPage from './ErrorPage'
 import Login from './Login'
 
 const App = () => {
@@ -12,7 +13,7 @@ const App = () => {
       <Routes>
         <Route path='/login' element={<Login />} />
         <Route path='/' element={<DetailPage />} />
-        <Route path='*' element={<div>404</div>} />
+        <Route path='*' element={<ErrorPage />} />
       </Routes>
     </Layout>
   )
